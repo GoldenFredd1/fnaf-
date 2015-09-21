@@ -9,7 +9,7 @@
     <div ng-controller="gameState">
     <table>
       <tr><th>Room Name</th><th>Room Index</th><th>Enemies Present</th></tr>
-      <tr ng-repeat="room in rooms"><td>{{ room.name }}</td><td>{{ $index }}</td><td><span ng-repeat="enemy in enemies">{{ enemy.name }} </span></td></tr>
+      <tr ng-repeat="room in rooms"><td>{{ room.name }}</td><td>{{ $index }}</td><td><span ng-repeat="enemy in enemies | filter : enemiesPresent($index)">{{ enemy.name }} </span></td></tr>
     </table>
     </div>
   </body>

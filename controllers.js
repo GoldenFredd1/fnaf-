@@ -33,4 +33,9 @@ securityGuardGame.controller('gameState', function($scope) {
         'location': 1
       }
     ]
+  $scope.enemiesPresent = function(roomIndex) {
+    return function(enemyIndex) {
+        return $scope.enemies[enemyIndex].location == $scope.rooms.roomIndex;
+    };
+  };
 });
