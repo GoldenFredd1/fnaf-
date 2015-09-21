@@ -3,18 +3,22 @@ var securityGuardGame = angular.module('securityGuardGame', []);
 securityGuardGame.controller('gameState', function($scope) {
     $scope.time = 0;
     $scope.power = 100;
-    $scope.rooms = [
+    $scope.locations = [
       {
-        'name': 'Stage'
+        'name': 'Stage',
+        'view': 'Stage'
       },
       {
-        'name': 'Pirate\'s Cove'
+        'name': 'Pirate\'s Cove',
+        'view': 'Pirate\'s Cove'
       },
       {
-        'name': 'Dining'
+        'name': 'Dining',
+        'view': 'Dining'
       },
       {
-        'name': 'Hallway'
+        'name': 'Hallway',
+        'view': 'Hallway'
       },
     ]
     $scope.enemies = [
@@ -59,9 +63,9 @@ securityGuardGame.controller('gameState', function($scope) {
         ]
       }
     ]
-  $scope.enemiesPresent = function(roomIndex) {
+  $scope.enemiesPresent = function(locationIndex) {
     return function(enemy) {
-      return enemy.location == roomIndex;
+      return enemy.location == locationIndex;
     };
   };
 });

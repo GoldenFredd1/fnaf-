@@ -21,12 +21,14 @@
 
       <table>
         <tr>
-          <th>Room Index</th>
-          <th>Room Name</th>
+          <th>Location Index</th>
+          <th>View Name</th>
+          <th>Location Name</th>
           <th>Enemies Present</th></tr>
-        <tr ng-repeat="room in rooms">
+        <tr ng-repeat="location in locations">
           <td>{{ $index }}</td>
-          <td>{{ room.name }}</td>
+          <td>{{ location.view }}</td>
+          <td>{{ location.name }}</td>
           <td><span ng-repeat="enemy in enemies | filter : enemiesPresent($index)">{{ enemy.name }} </span></td>
         </tr>
       </table>
