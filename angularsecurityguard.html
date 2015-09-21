@@ -6,18 +6,30 @@
     <script src="controllers.js"></script>
   </head>
   <body>
+    <h1>AngularJS Security Guard</h1>
+
+      <div>An attempt to implement game logic similar to Five Nights at Freddy's with AngularJS to practice data binding and views.</div>
+
     <div ng-controller="gameState">
-    <table>
-      <tr>
-        <th>Room Index</th>
-        <th>Room Name</th>
-        <th>Enemies Present</th></tr>
-      <tr ng-repeat="room in rooms">
-        <td>{{ $index }}</td>
-        <td>{{ room.name }}</td>
-        <td><span ng-repeat="enemy in enemies | filter : enemiesPresent($index)">{{ enemy.name }} </span></td>
-      </tr>
-    </table>
+
+      <h2>Resources</h2>
+
+      <div>Time: {{ time }}</div>
+      <div>Power: {{ power }}</div>
+
+      <h2>Room Status</h2>
+
+      <table>
+        <tr>
+          <th>Room Index</th>
+          <th>Room Name</th>
+          <th>Enemies Present</th></tr>
+        <tr ng-repeat="room in rooms">
+          <td>{{ $index }}</td>
+          <td>{{ room.name }}</td>
+          <td><span ng-repeat="enemy in enemies | filter : enemiesPresent($index)">{{ enemy.name }} </span></td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
