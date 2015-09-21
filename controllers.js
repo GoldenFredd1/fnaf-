@@ -1,70 +1,18 @@
 var securityGuardGame = angular.module('securityGuardGame', []);
 
-securityGuardGame.controller('gameState', ['$scope', '$interval', function($scope, $interval) {
+securityGuardGame.controller('gameState', ['$scope', '$interval', '$http', function($scope, $interval, $http) {
     $scope.time = 0;
     $scope.power = 100;
     // enemies' locations and Markov chain move targets reference the index of this location array
-    $scope.locations = [
-      {
-        'name': 'Stage',
-        'view': 'Stage'
-      },
-      {
-        'name': 'Pirate\'s Cove',
-        'view': 'Pirate\'s Cove'
-      },
-      {
-        'name': 'Dining',
-        'view': 'Dining'
-      },
-      {
-        'name': 'Hallway',
-        'view': 'Hallway'
-      },
-    ]
+    $http.get("locations.json")
+      .success(function(response) {
+        $scope.locations = response
+      });
     // Array of objects describing enemy attributes and behaviors
-    $scope.enemies = [
-      {
-        'name': 'Bear',
-        'location': 0,
-        'movesMarkovChain': [
-          [0, 0, 0, 0, 1],
-          [1, 2],
-          [1, 2, 3],
-          [2, 3]
-        ]
-      },
-      {
-        'name': 'Bunny',
-        'location': 0,
-        'movesMarkovChain': [
-          [0, 0, 0, 0, 1],
-          [1, 2],
-          [1, 2, 3],
-          [2, 3]
-        ]
-      },
-      {
-        'name': 'Chick',
-        'location': 0,
-        'movesMarkovChain': [
-          [0, 0, 0, 0, 1],
-          [1, 2],
-          [1, 2, 3],
-          [2, 3, 3, 3]
-        ]
-      },
-      {
-        'name': 'Fox',
-        'location': 1,
-        'movesMarkovChain': [
-          [1],
-          [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-          [3],
-          [1]
-        ]
-      }
-    ]
+    $http.get("enemies.json")
+      .success(function(response) {
+        $scope.enemies = response
+      });
 
   // Filter function for enemy location table cells
   $scope.enemiesPresent = function(locationIndex) {
