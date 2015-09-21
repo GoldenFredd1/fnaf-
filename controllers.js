@@ -1,7 +1,6 @@
 var securityGuardGame = angular.module('securityGuardGame', []);
 
 securityGuardGame.controller('gameState', function($scope) {
-    $scope.test = "Hi";
     $scope.rooms = [
       {
         'name': 'Stage'
