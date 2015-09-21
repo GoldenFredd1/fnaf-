@@ -68,4 +68,12 @@ securityGuardGame.controller('gameState', function($scope) {
       return enemy.location == locationIndex;
     };
   };
+
+  $scope.gameTick = function() {
+    // $scope.time ++;
+    $scope.time = $scope.time + 1;
+    console.log('gameTick');
+  };
+
+  setInterval($scope.gameTick, 1000);
 });
