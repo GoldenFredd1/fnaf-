@@ -1,117 +1,117 @@
 [
     {
         "view":  "Cam 1a",
-        "room":  "room",
-        "name":  "Far"
+        "room":  "Stage",
+        "name":  "Assigned Spot"
     },
     {
         "view":  "Cam 1a",
-        "room":  "room",
-        "name":  "Near"
+        "room":  "Stage",
+        "name":  "Looking at camera"
     },
     {
         "view":  "Cam 1b",
-        "room":  "room",
+        "room":  "Dining",
         "name":  "Far"
     },
     {
         "view":  "Cam 1b",
-        "room":  "room",
+        "room":  "Dining",
         "name":  "Near"
     },
     {
         "view":  "Cam 1c",
-        "room":  "room",
+        "room":  "Pirate Cove",
         "name":  "Hidden Behind Curtain"
     },
     {
         "view":  "Cam 1c",
-        "room":  "room",
+        "room":  "Pirate Cove",
         "name":  "Peeking Out of Curtain"
     },
     {
         "view":  "Cam 1c",
-        "room":  "room",
+        "room":  "Pirate Cove",
         "name":  "Outside Curtain"
     },
     {
         "view":  "Cam 2a",
-        "room":  "room",
+        "room":  "West Hall",
         "name":  "Far"
     },
     {
         "view":  "Cam 2a",
-        "room":  "room",
+        "room":  "West Hall",
         "name":  "Near"
     },
     {
         "view":  "Cam 2b",
-        "room":  "room",
+        "room":  "West Hall",
         "name":  "Far"
     },
     {
         "view":  "Cam 2b",
-        "room":  "room",
+        "room":  "West Hall",
         "name":  "Near"
     },
     {
         "view":  "Cam 3",
-        "room":  "room",
+        "room":  "Storage",
         "name":  "Far"
     },
     {
         "view":  "Cam 3",
-        "room":  "room",
+        "room":  "Storage",
         "name":  "Near"
     },
     {
         "view":  "Cam 4a",
-        "room":  "room",
+        "room":  "East Hall",
         "name":  "Far"
     },
     {
         "view":  "Cam 4a",
-        "room":  "room",
+        "room":  "East Hall",
         "name":  "Near"
     },
     {
         "view":  "Cam 4b",
-        "room":  "room",
+        "room":  "East Hall",
         "name":  "Far"
     },
     {
         "view":  "Cam 4b",
-        "room":  "room",
+        "room":  "East Hall",
         "name":  "Near"
     },
     {
         "view":  "Cam 5",
-        "room":  "room",
+        "room":  "Backstage",
         "name":  "Far"
     },
     {
         "view":  "Cam 5",
-        "room":  "room",
+        "room":  "Backstage",
         "name":  "Near"
     },
     {
         "view":  "Cam 6",
-        "room":  "room",
-        "name":  "Far"
-    },
-    {
-        "view":  "Cam 6",
-        "room":  "room",
-        "name":  "Near"
+        "room":  "Kitchen",
+        "name":  "Kitchen"
     },
     {
         "view":  "Cam 7",
-        "room":  "room",
+        "room":  "Restrooms",
         "name":  "Far"
     },
     {
         "view":  "Cam 7",
-        "room":  "room",
+        "room":  "Restrooms",
         "name":  "Near"
+    },
+    {
+        "view":  "You",
+        "room":  "Security Office",
+        "name":  "Player"
     }
 ]
