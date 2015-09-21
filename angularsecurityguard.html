@@ -1,14 +1,15 @@
 <!doctype html>
 <html ng-app="securityGuardGame">
   <head>
-    <title>AngularJS Security Guard</title>
+    <title>Angular Security Guard</title>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="controllers.js"></script>
   </head>
   <body>
-    <h1>AngularJS Security Guard</h1>
+    <h1>Angular Security Guard</h1>
 
-      <div>An attempt to implement game logic similar to Five Nights at Freddy's with AngularJS to practice data binding and views.</div>
+      <p>An attempt to implement game logic similar to <a href="https://en.wikipedia.org/wiki/Five_Nights_at_Freddy%27s">Five Nights at Freddy's</a> with AngularJS to practice data binding and views.</p>
+      <p>Currently there is no user interface aside from refreshing or leaving the page. The timer counts seconds, and each second each enemy may move depending on its program. If an enemy reaches the security office it may stick around a few seconds, then it will go backstage, then either continue wandering or go back to its original position if backstage isn't on its movement possibilities. Power never changes. Not all locations are used.</p>
 
     <div ng-controller="gameState">
 
