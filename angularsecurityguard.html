@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app="securityGuardGame">
+  <head>
+    <title>AngularJS Security Guard</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="controllers.js"></script>
+  </head>
+  <body>
+    <div ng-controller="gameState">
+    <div>{{ test }}</div>
+    <table>
+      <tr ng-repeat="room in rooms"><td>{{ room.name }}</td><td>{{ $index }}</td></tr>
+    </table>
+    </div>
+  </body>
+</html>
