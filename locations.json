@@ -1,18 +1,117 @@
 [
-  {
-    "name": "Stage",
-    "view": "Stage"
-  },
-  {
-    "name": "Pirate Cove",
-    "view": "Pirate Cove"
-  },
-  {
-    "name": "Dining",
-    "view": "Dining"
-  },
-  {
-    "name": "Hallway",
-    "view": "Hallway"
-  }
+    {
+        "view":  "Cam 1a",
+        "room":  "room",
+        "name":  "Far"
+    },
+    {
+        "view":  "Cam 1a",
+        "room":  "room",
+        "name":  "Near"
+    },
+    {
+        "view":  "Cam 1b",
+        "room":  "room",
+        "name":  "Far"
+    },
+    {
+        "view":  "Cam 1b",
+        "room":  "room",
+        "name":  "Near"
+    },
+    {
+        "view":  "Cam 1c",
+        "room":  "room",
+        "name":  "Hidden Behind Curtain"
+    },
+    {
+        "view":  "Cam 1c",
+        "room":  "room",
+        "name":  "Peeking Out of Curtain"
+    },
+    {
+        "view":  "Cam 1c",
+        "room":  "room",
+        "name":  "Outside Curtain"
+    },
+    {
+        "view":  "Cam 2a",
+        "room":  "room",
+        "name":  "Far"
+    },
+    {
+        "view":  "Cam 2a",
+        "room":  "room",
+        "name":  "Near"
+    },
+    {
+        "view":  "Cam 2b",
+        "room":  "room",
+        "name":  "Far"
+    },
+    {
+        "view":  "Cam 2b",
+        "room":  "room",
+        "name":  "Near"
+    },
+    {
+        "view":  "Cam 3",
+        "room":  "room",
+        "name":  "Far"
+    },
+    {
+        "view":  "Cam 3",
+        "room":  "room",
+        "name":  "Near"
+    },
+    {
+        "view":  "Cam 4a",
+        "room":  "room",
+        "name":  "Far"
+    },
+    {
+        "view":  "Cam 4a",
+        "room":  "room",
+        "name":  "Near"
+    },
+    {
+        "view":  "Cam 4b",
+        "room":  "room",
+        "name":  "Far"
+    },
+    {
+        "view":  "Cam 4b",
+        "room":  "room",
+        "name":  "Near"
+    },
+    {
+        "view":  "Cam 5",
+        "room":  "room",
+        "name":  "Far"
+    },
+    {
+        "view":  "Cam 5",
+        "room":  "room",
+        "name":  "Near"
+    },
+    {
+        "view":  "Cam 6",
+        "room":  "room",
+        "name":  "Far"
+    },
+    {
+        "view":  "Cam 6",
+        "room":  "room",
+        "name":  "Near"
+    },
+    {
+        "view":  "Cam 7",
+        "room":  "room",
+        "name":  "Far"
+    },
+    {
+        "view":  "Cam 7",
+        "room":  "room",
+        "name":  "Near"
+    }
 ]
