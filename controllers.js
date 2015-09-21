@@ -1,6 +1,6 @@
 var securityGuardGame = angular.module('securityGuardGame', []);
 
-securityGuardGame.controller('gameState', function($scope) {
+securityGuardGame.controller('gameState', ['$scope', '$interval', function($scope, $interval) {
     $scope.time = 0;
     $scope.power = 100;
     $scope.locations = [
@@ -75,5 +75,6 @@ securityGuardGame.controller('gameState', function($scope) {
     console.log('gameTick');
   };
 
-  setInterval($scope.gameTick, 1000);
-});
+  $interval(function(){ $scope.gameTick(); }, 1000);
+
+}]);
