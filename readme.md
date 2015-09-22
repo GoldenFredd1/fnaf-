@@ -1,5 +1,7 @@
 # Angular Security Guard
 
+[Try it out here on GitHub](https://midnightfreddie.github.io/AngularSecurityGuard/angularsecurityguard.html)
+
 An attempt to implement game logic similar to
 [Five Nights at Freddy's](https://en.wikipedia.org/wiki/Five_Nights_at_Freddy%27s)
 with AngularJS to practice data binding and views.
