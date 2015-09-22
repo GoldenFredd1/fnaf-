@@ -18,23 +18,25 @@
       <div>Time: {{ time }}</div>
       <div>Power: {{ power }}</div>
 
-      <h2>Room Status</h2>
-
-      <table>
-        <tr>
-          <th>Location Index</th>
-          <th>View</th>
-          <th>Room</th>
-          <th>Location</th>
-          <th>Enemies Present</th></tr>
-        <tr ng-repeat="location in locations">
-          <td>{{ $index }}</td>
-          <td>{{ location.view }}</td>
-          <td>{{ location.room }}</td>
-          <td>{{ location.name }}</td>
-          <td><span ng-repeat="enemy in enemies | filter : enemiesPresent($index)">{{ enemy.name }} </span></td>
-        </tr>
-      </table>
+      <div style="display: {{ display() }};">
+        <h2>Location Status</h2>
+  
+        <table>
+          <tr>
+            <th>Loc Index</th>
+            <th>View</th>
+            <th>Room</th>
+            <th>Location</th>
+            <th>Enemies Present</th></tr>
+          <tr ng-repeat="location in locations">
+            <td>{{ $index }}</td>
+            <td>{{ location.view }}</td>
+            <td>{{ location.room }}</td>
+            <td>{{ location.name }}</td>
+            <td><span ng-repeat="enemy in enemies | filter : enemiesPresent($index)">{{ enemy.name }} </span></td>
+          </tr>
+        </table>
+      <div>
     </div>
   </body>
 </html>

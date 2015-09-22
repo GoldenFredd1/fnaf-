@@ -1,6 +1,7 @@
 var securityGuardGame = angular.module('securityGuardGame', []);
 
 securityGuardGame.controller('gameState', ['$scope', '$interval', '$http', function($scope, $interval, $http) {
+    $scope.debug = true;
     $scope.time = 0;
     $scope.power = 100;
     // enemies' locations and Markov chain move targets reference the index of this location array
@@ -36,5 +37,10 @@ securityGuardGame.controller('gameState', ['$scope', '$interval', '$http', funct
 
   // Run function gameTick every second
   $interval(function(){ $scope.gameTick(); }, 1000);
+
+  // Sets display to none if debug not true
+  $scope.display = function() {
+    return $scope.debug ? "block" : "none";
+  };
 
 }]);
