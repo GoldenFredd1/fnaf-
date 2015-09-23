@@ -2,165 +2,165 @@
     {
         "name":  "Cam 1a",
         "type":  "cam",
-        "room":  "room",
+        "room":  "Stage",
         "location":  [
                          {
-                             "name":  "Far",
-                             "locId":  101
+                             "name":  "Assigned Spot",
+                             "locId":  111
                          },
                          {
-                             "name":  "Near",
-                             "locId":  102
+                             "name":  "Looking at Camera",
+                             "locId":  112
                          }
                      ]
     },
     {
         "name":  "Cam 1b",
         "type":  "cam",
-        "room":  "room",
+        "room":  "Dining",
         "location":  [
                          {
                              "name":  "Far",
-                             "locId":  101
+                             "locId":  121
                          },
                          {
                              "name":  "Near",
-                             "locId":  102
+                             "locId":  122
                          }
                      ]
     },
     {
         "name":  "Cam 1c",
         "type":  "cam",
-        "room":  "room",
+        "room":  "Pirate Cove",
         "location":  [
                          {
-                             "name":  "Far",
-                             "locId":  101
+                             "name":  "Hidden Behind Curtain",
+                             "locId":  131
                          },
                          {
-                             "name":  "Near",
-                             "locId":  102
+                             "name":  "Peeking Out of Curtain",
+                             "locId":  132
+                         },
+                         {
+                             "name":  "Outside Curtain",
+                             "locId":  133
                          }
                      ]
     },
     {
         "name":  "Cam 2a",
         "type":  "cam",
-        "room":  "room",
+        "room":  "West Hall",
         "location":  [
                          {
                              "name":  "Far",
-                             "locId":  101
+                             "locId":  211
                          },
                          {
                              "name":  "Near",
-                             "locId":  102
+                             "locId":  212
                          }
                      ]
     },
     {
         "name":  "Cam 2b",
         "type":  "cam",
-        "room":  "room",
+        "room":  "West Hall",
         "location":  [
                          {
                              "name":  "Far",
-                             "locId":  101
+                             "locId":  221
                          },
                          {
                              "name":  "Near",
-                             "locId":  102
+                             "locId":  222
                          }
                      ]
     },
     {
         "name":  "Cam 3",
         "type":  "cam",
-        "room":  "room",
+        "room":  "Storage",
         "location":  [
                          {
                              "name":  "Far",
-                             "locId":  101
+                             "locId":  301
                          },
                          {
                              "name":  "Near",
-                             "locId":  102
+                             "locId":  302
                          }
                      ]
     },
     {
         "name":  "Cam 4a",
         "type":  "cam",
-        "room":  "room",
+        "room":  "East Hall",
         "location":  [
                          {
                              "name":  "Far",
-                             "locId":  101
+                             "locId":  411
                          },
                          {
                              "name":  "Near",
-                             "locId":  102
+                             "locId":  412
                          }
                      ]
     },
     {
         "name":  "Cam 4b",
         "type":  "cam",
-        "room":  "room",
+        "room":  "East Hall",
         "location":  [
                          {
                              "name":  "Far",
-                             "locId":  101
+                             "locId":  421
                          },
                          {
                              "name":  "Near",
-                             "locId":  102
+                             "locId":  422
                          }
                      ]
     },
     {
         "name":  "Cam 5",
         "type":  "cam",
-        "room":  "room",
+        "room":  "Backstage",
         "location":  [
                          {
                              "name":  "Far",
-                             "locId":  101
+                             "locId":  501
                          },
                          {
                              "name":  "Near",
-                             "locId":  102
+                             "locId":  502
                          }
                      ]
     },
     {
         "name":  "Cam 6",
         "type":  "cam",
-        "room":  "room",
+        "room":  "Kitchen",
         "location":  [
                          {
                              "name":  "Far",
-                             "locId":  101
-                         },
-                         {
-                             "name":  "Near",
-                             "locId":  102
+                             "locId":  601
                          }
                      ]
     },
     {
         "name":  "Cam 7",
         "type":  "cam",
-        "room":  "room",
+        "room":  "Restrooms",
         "location":  [
                          {
                              "name":  "Far",
-                             "locId":  101
+                             "locId":  701
                          },
                          {
                              "name":  "Near",
-                             "locId":  102
+                             "locId":  702
                          }
                      ]
     },
@@ -170,8 +170,8 @@
         "room":  "West Hall Corner",
         "location":  [
                          {
-                             "name":  "Far",
-                             "locId":  101
+                             "name":  "Left Door",
+                             "locId":  221
                          }
                      ]
     },
@@ -181,8 +181,8 @@
         "room":  "East Hall Corner",
         "location":  [
                          {
-                             "name":  "Far",
-                             "locId":  101
+                             "name":  "Right Door",
+                             "locId":  421
                          }
                      ]
     },
@@ -193,7 +193,7 @@
         "location":  [
                          {
                              "name":  "you",
-                             "locId":  101
+                             "locId":  999
                          }
                      ]
     }
