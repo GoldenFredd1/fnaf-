@@ -1,7 +1,7 @@
 [
   {
     "name": "Bear",
-    "location": 0,
+    "location": 111,
     "movesMarkovChain": [
       [0,0,0,0,0,0,0,1],
       [1,1,2],
@@ -30,7 +30,7 @@
   },
   {
     "name": "Bunny",
-    "location": 0,
+    "location": 111,
     "movesMarkovChain": [
       [0,0,0,0,0,0,0,1],
       [1,1,2],
@@ -59,7 +59,7 @@
   },
   {
     "name": "Chick",
-    "location": 0,
+    "location": 111,
     "movesMarkovChain": [
       [0,0,0,0,0,0,0,1],
       [1,1,2],
@@ -88,7 +88,7 @@
   },
   {
     "name": "Fox",
-    "location": 4,
+    "location": 131,
     "movesMarkovChain": [
       [0,4],
       [1,4],
