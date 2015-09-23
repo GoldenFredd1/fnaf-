@@ -28,6 +28,7 @@
           <thead>
             <tr>
               <th>View</th>
+              <th>Type</th>
               <th>Room</th>
               <th>Location Name</th>
               <th>Location ID</th>
@@ -37,6 +38,7 @@
           <tbody ng-repeat="view in views">
             <tr ng-repeat-start="loc in view.location.slice(0,1)">
               <td rowspan="{{ view.location.length }}">{{ view.name }}</td>
+              <td rowspan="{{ view.location.length }}">{{ view.type }}</td>
               <td rowspan="{{ view.location.length }}">{{ view.room }}</td>
               <td>{{ loc.name }}</td>
               <td>{{ loc.locId }}</td>
