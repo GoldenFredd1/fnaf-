@@ -4,10 +4,10 @@ securityGuardGame.controller('gameState', ['$scope', '$interval', '$http', funct
     $scope.debug = true;
     $scope.time = 0;
     $scope.power = 100;
-    // enemies' locations and Markov chain move targets reference the index of this location array
-    $http.get("locations.json")
+
+    $http.get("views.json")
       .success(function(response) {
-        $scope.locations = response
+        $scope.views = response
       });
     // Array of objects describing enemy attributes and behaviors
     $http.get("enemies.json")
