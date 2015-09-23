@@ -21,7 +21,7 @@
       <div>Time: {{ time }}</div>
       <div>Power: {{ power }}</div>
 
-      <div style="display: {{ display() }};">
+      <div ng-show="debug == true">
         <h2>View Status</h2>
   
         <table>
@@ -36,15 +36,10 @@
             </tr>
           </thead>
           <tbody ng-repeat="view in views">
-            <tr ng-repeat="loc in view.location.slice(0,1)">
-              <td rowspan="{{ view.location.length }}">{{ view.name }}</td>
-              <td rowspan="{{ view.location.length }}">{{ view.type }}</td>
-              <td rowspan="{{ view.location.length }}">{{ view.room }}</td>
-              <td>{{ loc.name }}</td>
-              <td>{{ loc.locId }}</td>
-              <td><span ng-repeat="enemy in enemies" ng-show="enemy.location == loc.locId">{{ enemy.name }} </span></td>
-            </tr>
-            <tr ng-repeat="loc in view.location.slice(1)">
+            <tr ng-repeat="loc in view.location">
+              <td ng-if="$index == 0" rowspan="{{ view.location.length }}">{{ view.name }}</td>
+              <td ng-if="$index == 0" rowspan="{{ view.location.length }}">{{ view.type }}</td>
+              <td ng-if="$index == 0" rowspan="{{ view.location.length }}">{{ view.room }}</td>
               <td>{{ loc.name }}</td>
               <td>{{ loc.locId }}</td>
               <td><span ng-repeat="enemy in enemies" ng-show="enemy.location == loc.locId">{{ enemy.name }} </span></td>

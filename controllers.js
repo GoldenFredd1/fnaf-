@@ -31,9 +31,4 @@ securityGuardGame.controller('gameState', ['$scope', '$interval', '$http', funct
   // Run function gameTick every second
   $interval(function(){ $scope.gameTick(); }, 1000);
 
-  // Sets display to none if debug not true
-  $scope.display = function() {
-    return $scope.debug ? "block" : "none";
-  };
-
 }]);
