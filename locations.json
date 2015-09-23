@@ -1,117 +1,200 @@
 [
     {
-        "view":  "Cam 1a",
-        "room":  "Stage",
-        "name":  "Assigned Spot"
+        "name":  "Cam 1a",
+        "type":  "cam",
+        "room":  "room",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         },
+                         {
+                             "name":  "Near",
+                             "locId":  102
+                         }
+                     ]
     },
     {
-        "view":  "Cam 1a",
-        "room":  "Stage",
-        "name":  "Looking at camera"
+        "name":  "Cam 1b",
+        "type":  "cam",
+        "room":  "room",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         },
+                         {
+                             "name":  "Near",
+                             "locId":  102
+                         }
+                     ]
     },
     {
-        "view":  "Cam 1b",
-        "room":  "Dining",
-        "name":  "Far"
+        "name":  "Cam 1c",
+        "type":  "cam",
+        "room":  "room",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         },
+                         {
+                             "name":  "Near",
+                             "locId":  102
+                         }
+                     ]
     },
     {
-        "view":  "Cam 1b",
-        "room":  "Dining",
-        "name":  "Near"
+        "name":  "Cam 2a",
+        "type":  "cam",
+        "room":  "room",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         },
+                         {
+                             "name":  "Near",
+                             "locId":  102
+                         }
+                     ]
     },
     {
-        "view":  "Cam 1c",
-        "room":  "Pirate Cove",
-        "name":  "Hidden Behind Curtain"
+        "name":  "Cam 2b",
+        "type":  "cam",
+        "room":  "room",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         },
+                         {
+                             "name":  "Near",
+                             "locId":  102
+                         }
+                     ]
     },
     {
-        "view":  "Cam 1c",
-        "room":  "Pirate Cove",
-        "name":  "Peeking Out of Curtain"
+        "name":  "Cam 3",
+        "type":  "cam",
+        "room":  "room",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         },
+                         {
+                             "name":  "Near",
+                             "locId":  102
+                         }
+                     ]
     },
     {
-        "view":  "Cam 1c",
-        "room":  "Pirate Cove",
-        "name":  "Outside Curtain"
+        "name":  "Cam 4a",
+        "type":  "cam",
+        "room":  "room",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         },
+                         {
+                             "name":  "Near",
+                             "locId":  102
+                         }
+                     ]
     },
     {
-        "view":  "Cam 2a",
-        "room":  "West Hall",
-        "name":  "Far"
+        "name":  "Cam 4b",
+        "type":  "cam",
+        "room":  "room",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         },
+                         {
+                             "name":  "Near",
+                             "locId":  102
+                         }
+                     ]
     },
     {
-        "view":  "Cam 2a",
-        "room":  "West Hall",
-        "name":  "Near"
+        "name":  "Cam 5",
+        "type":  "cam",
+        "room":  "room",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         },
+                         {
+                             "name":  "Near",
+                             "locId":  102
+                         }
+                     ]
     },
     {
-        "view":  "Cam 2b",
-        "room":  "West Hall",
-        "name":  "Far"
+        "name":  "Cam 6",
+        "type":  "cam",
+        "room":  "room",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         },
+                         {
+                             "name":  "Near",
+                             "locId":  102
+                         }
+                     ]
     },
     {
-        "view":  "Cam 2b",
-        "room":  "West Hall",
-        "name":  "Near"
+        "name":  "Cam 7",
+        "type":  "cam",
+        "room":  "room",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         },
+                         {
+                             "name":  "Near",
+                             "locId":  102
+                         }
+                     ]
     },
     {
-        "view":  "Cam 3",
-        "room":  "Storage",
-        "name":  "Far"
+        "name":  "West Door",
+        "type":  "door",
+        "room":  "West Hall Corner",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         }
+                     ]
     },
     {
-        "view":  "Cam 3",
-        "room":  "Storage",
-        "name":  "Near"
+        "name":  "East Door",
+        "type":  "door",
+        "room":  "East Hall Corner",
+        "location":  [
+                         {
+                             "name":  "Far",
+                             "locId":  101
+                         }
+                     ]
     },
     {
-        "view":  "Cam 4a",
-        "room":  "East Hall",
-        "name":  "Far"
-    },
-    {
-        "view":  "Cam 4a",
-        "room":  "East Hall",
-        "name":  "Near"
-    },
-    {
-        "view":  "Cam 4b",
-        "room":  "East Hall",
-        "name":  "Far"
-    },
-    {
-        "view":  "Cam 4b",
-        "room":  "East Hall",
-        "name":  "Near"
-    },
-    {
-        "view":  "Cam 5",
-        "room":  "Backstage",
-        "name":  "Far"
-    },
-    {
-        "view":  "Cam 5",
-        "room":  "Backstage",
-        "name":  "Near"
-    },
-    {
-        "view":  "Cam 6",
-        "room":  "Kitchen",
-        "name":  "Kitchen"
-    },
-    {
-        "view":  "Cam 7",
-        "room":  "Restrooms",
-        "name":  "Far"
-    },
-    {
-        "view":  "Cam 7",
-        "room":  "Restrooms",
-        "name":  "Near"
-    },
-    {
-        "view":  "You",
+        "name":  "Player",
+        "type":  "office",
         "room":  "Security Office",
-        "name":  "Player"
+        "location":  [
+                         {
+                             "name":  "you",
+                             "locId":  101
+                         }
+                     ]
     }
 ]
