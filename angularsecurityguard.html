@@ -24,39 +24,30 @@
       <div style="display: {{ display() }};">
         <h2>View Status</h2>
   
-        <table ng-repeat="view in views">
-          <tr>
-            <th>View</th>
-            <th>Room</th>
-            <th>Location Name</th>
-            <th>Location ID</th>
-            <th>Enemies Present</th></tr>
-          <tr ng-repeat-start="loc in view.location.slice(0,1)">
-            <td rowspan="{{ view.location.length }}">{{ view.name }}</td>
-            <td rowspan="{{ view.location.length }}">{{ view.room }}</td>
-            <td>Hi {{ loc.name }}</td>
-            <td>{{ loc.locId }}</td>
-            <td>derp</td>
-          </tr>
-          <tr ng-repeat-end ng-repeat="loc in view.location.slice(1)">
-            <td>{{ loc.name }}</td>
-            <td>{{ loc.locId }}</td>
-            <td>derp</td>
-          </tr>
-        </table>
-
-        <table ng-repeat="view in views">
-          <tr>
-            <th>View</th>
-            <th>Room</th>
-            <th>Location</th>
-            <th>{{ view.location }}</th>
-            <th>Enemies Present</th></tr>
-          <tr ng-repeat="loc in view.location">
-            <td>{{ loc.locId }}</td>
-            <td>{{ loc.name }}</td>
-            <td><span ng-repeat="enemy in enemies" ng-show="enemy.location == $parent.$index">{{ enemy.name }} </span></td>
-          </tr>
+        <table>
+          <thead>
+            <tr>
+              <th>View</th>
+              <th>Room</th>
+              <th>Location Name</th>
+              <th>Location ID</th>
+              <th>Enemies Present</th>
+            </tr>
+          </thead>
+          <tbody ng-repeat="view in views">
+            <tr ng-repeat-start="loc in view.location.slice(0,1)">
+              <td rowspan="{{ view.location.length }}">{{ view.name }}</td>
+              <td rowspan="{{ view.location.length }}">{{ view.room }}</td>
+              <td>{{ loc.name }}</td>
+              <td>{{ loc.locId }}</td>
+              <td><span ng-repeat="enemy in enemies" ng-show="enemy.location == loc.locId">{{ enemy.name }} </span></td>
+            </tr>
+            <tr ng-repeat-end ng-repeat="loc in view.location.slice(1)">
+              <td>{{ loc.name }}</td>
+              <td>{{ loc.locId }}</td>
+              <td><span ng-repeat="enemy in enemies" ng-show="enemy.location == loc.locId">{{ enemy.name }} </span></td>
+            </tr>
+          </tbody>
         </table>
       <div>
     </div>
