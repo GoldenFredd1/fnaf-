@@ -165,6 +165,17 @@
                      ]
     },
     {
+        "name":  "Player",
+        "type":  "office",
+        "room":  "Security Office",
+        "location":  [
+                         {
+                             "name":  "you",
+                             "locId":  999
+                         }
+                     ]
+    },
+    {
         "name":  "West Door",
         "type":  "door",
         "room":  "West Hall Corner",
@@ -183,17 +194,6 @@
                          {
                              "name":  "Right Door",
                              "locId":  421
-                         }
-                     ]
-    },
-    {
-        "name":  "Player",
-        "type":  "office",
-        "room":  "Security Office",
-        "location":  [
-                         {
-                             "name":  "you",
-                             "locId":  999
                          }
                      ]
     }

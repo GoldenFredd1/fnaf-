@@ -13,7 +13,7 @@ securityGuardGame.controller('gameState', ['$scope', '$interval', '$http', funct
     $http.get("enemies.json")
       .success(function(response) {
         $scope.enemies = response
-
+/*
         // temp conversion
         $scope.locindex = [];
         $scope.views.forEach(function(view) {
@@ -36,6 +36,7 @@ securityGuardGame.controller('gameState', ['$scope', '$interval', '$http', funct
           $scope.newenemies.push(mytemp);
         });
         $scope.tempstring = angular.toJson($scope.newenemies, true)
+*/
       });
 
   // Reassign enemy location bgased on current location and Markov chain
