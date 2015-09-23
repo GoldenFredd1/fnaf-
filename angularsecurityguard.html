@@ -33,7 +33,7 @@
             <td>{{ location.view }}</td>
             <td>{{ location.room }}</td>
             <td>{{ location.name }}</td>
-            <td><span ng-repeat="enemy in enemies | filter : enemiesPresent($index)">{{ enemy.name }} </span></td>
+            <td><span ng-repeat="enemy in enemies" ng-show="enemy.location == $parent.$index">{{ enemy.name }} </span></td>
           </tr>
         </table>
       <div>

@@ -15,13 +15,6 @@ securityGuardGame.controller('gameState', ['$scope', '$interval', '$http', funct
         $scope.enemies = response
       });
 
-  // Filter function for enemy location table cells
-  $scope.enemiesPresent = function(locationIndex) {
-    return function(enemy) {
-      return enemy.location == locationIndex;
-    };
-  };
-
   // Reassign enemy location bgased on current location and Markov chain
   $scope.move = function(enemy) {
     moves = enemy.movesMarkovChain[enemy.location];
