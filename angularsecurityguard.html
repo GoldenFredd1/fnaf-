@@ -75,10 +75,20 @@
       <span ng-repeat-end> </span>
       <!-- The above spanned space is a hack to visually separate the SVGs. When I'm managing views this should go away -->
 
-      <h2>Resources</h2>
+      <h2>Stats</h2>
 
       <div>Time: {{ time }}</div>
       <div>Power: {{ power }}</div>
+      <table>
+      <tr>
+        <th>Enemy</th>
+        <th>Kills</th>
+      </tr>
+      <tr ng-repeat="enemy in enemies">
+        <td>{{ enemy.name }}</td>
+        <td>{{ enemy.kills }}</td>
+      </tr>
+      </table>
 
       <div ng-show="debug == true">
         <h2>View Status</h2>
