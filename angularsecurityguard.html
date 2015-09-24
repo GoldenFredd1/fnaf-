@@ -6,6 +6,10 @@
     <script src="controllers.js"></script>
     <style>
       table, th, td { border: 1px solid black; }
+      #bear { fill: brown; }
+      #fox { fill: red; }
+      #bunny { fill: blue; }
+      #chick { fill: yellow; stroke: black; }
     </style>
   </head>
   <body>
@@ -16,27 +20,44 @@
 
     <div ng-controller="gameState">
 
-      <svg xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(100,100)">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <g id="eyes">
+          <circle r="5" cx="7" cy="-7" style="fill: white";></circle>
+          <circle r="2" cx="7" cy="-7" style="fill: blue";></circle>
+          <circle r="5" cx="-7" cy="-7" style="fill: white";></circle>
+          <circle r="2" cx="-7" cy="-7" style="fill: blue";></circle>
+          </g>
+          <circle id="nose" r="5" style="fill: black";></circle>
+        </defs>
+        <g id="bear" transform="translate(200,100)">
           <circle r="10" cx="-15" cy="-15"></circle>
           <circle r="10" cx="15" cy="-15"></circle>
           <circle r="20"></circle>
+          <use xlink:href="#eyes"></use>
+          <use xlink:href="#nose"></use>
         </g>
-        <g transform="translate(150,100)">
+        <g id="fox" transform="translate(100,100)">
           <polygon transform = "translate(-15,-18) rotate(-40)" points="-10,9 10,9 0,-12"></polygon>
           <polygon transform = "translate(15,-18) rotate(40)" points="-10,9 10,9 0,-12"></polygon>
           <circle r="20"></circle>
+          <use xlink:href="#eyes"></use>
+          <use xlink:href="#nose"></use>
         </g>
-        <g transform="translate(200,100)">
+        <g id="bunny" transform="translate(150,100)">
           <ellipse rx="5" ry="20" transform="translate(-10,-20) rotate(-10)"></ellipse>
           <ellipse rx="5" ry="20" transform="translate(10,-20) rotate(10)"></ellipse>
           <circle r="20"></circle>
+          <use xlink:href="#eyes"></use>
+          <use xlink:href="#nose"></use>
         </g>
-        <g transform="translate(250,100)">
+        <g id="chick" transform="translate(250,100)">
           <ellipse rx="2" ry="10" transform="translate(0,-20)"></ellipse>
           <ellipse rx="2" ry="10" transform="translate(-5,-20) rotate(-45)"></ellipse>
           <ellipse rx="2" ry="10" transform="translate(5,-20) rotate(45)"></ellipse>
           <circle r="20"></circle>
+          <use xlink:href="#eyes"></use>
+          <polygon points="-7,0 0,-4 7,0 0,8" style="fill: orange;"></polygon>
         </g>
       </svg>
 
