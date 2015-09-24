@@ -1,6 +1,6 @@
 var securityGuardGame = angular.module('securityGuardGame', []);
 
-securityGuardGame.controller('gameState', ['$scope', '$interval', '$http', function($scope, $interval, $http) {
+securityGuardGame.controller('gameState', ['$scope', '$interval', '$http', '$sce', function($scope, $interval, $http, $sce) {
     $scope.debug = true;
     $scope.time = 0;
     $scope.power = 100;
@@ -30,5 +30,10 @@ securityGuardGame.controller('gameState', ['$scope', '$interval', '$http', funct
 
   // Run function gameTick every second
   $interval(function(){ $scope.gameTick(); }, 1000);
+
+  $scope.explicitlyTrustedHtml = function(input) {
+    console.log("hi");
+    return $sce.trustAsHtml(input.name);
+  }
 
 }]);

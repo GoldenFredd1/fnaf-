@@ -10,6 +10,7 @@
       #Fox { fill: red; }
       #Bunny { fill: blue; }
       #Chick { fill: yellow; stroke: black; }
+      svg { background: gray; }
     </style>
   </head>
   <body>
@@ -20,7 +21,7 @@
 
     <div ng-controller="gameState">
 
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
         <defs>
           <g id="eyes">
           <circle r="5" cx="7" cy="-7" style="fill: white";></circle>
@@ -59,17 +60,20 @@
           <polygon points="-7,0 0,-4 7,0 0,8" style="fill: orange;"></polygon>
         </g>
         </defs>
-        <use xlink:href="#Fox" x="100" y="100"></use>
-        <use xlink:href="#Bunny" x="150" y="100"></use>
-        <use xlink:href="#Bear" x="200" y="100"></use>
-        <use xlink:href="#Chick" x="250" y="100"></use>
       </svg>
 
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ng-repeat="view in views" ng-if="view.type == 'cam'">
+      <!-- Currntly manually listing use links because $sce errors when trying to use an expression for xlink:href  -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ng-repeat-start="view in views" width="200" height="150">
         <g ng-repeat="loc in view.location">
-        <use ng-repeat="enemy in enemies" xlink:href="#{{ enemy.name }}" x="{{ 100 + 50 * $index" y="{{ 100 + 20 * $parent.$index }}"></use>
+        <use xlink:href="#Fox" x="25" ng-attr-y="{{ 60 + 40 * $index }}" ng-show="loc.locId == enemies[3]['location']"></use>
+        <use xlink:href="#Bunny" x="75" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[1]['location']"></use>
+        <use xlink:href="#Bear" x="125" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[0]['location']"></use>
+        <use xlink:href="#Chick" x="175" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[2]['location']"></use>
         </g>
+        <text y="20">{{ view.name }}  {{ view.room }}</text>
       </svg>
+      <span ng-repeat-end> </span>
+      <!-- The above spanned space is a hack to visually separate the SVGs. When I'm managing views this should go away -->
 
       <h2>Resources</h2>
 
