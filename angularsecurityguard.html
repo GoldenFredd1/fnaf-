@@ -16,6 +16,30 @@
 
     <div ng-controller="gameState">
 
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(100,100)">
+          <circle r="10" cx="-15" cy="-15"></circle>
+          <circle r="10" cx="15" cy="-15"></circle>
+          <circle r="20"></circle>
+        </g>
+        <g transform="translate(150,100)">
+          <polygon transform = "translate(-15,-18) rotate(-40)" points="-10,9 10,9 0,-12"></polygon>
+          <polygon transform = "translate(15,-18) rotate(40)" points="-10,9 10,9 0,-12"></polygon>
+          <circle r="20"></circle>
+        </g>
+        <g transform="translate(200,100)">
+          <ellipse rx="5" ry="20" transform="translate(-10,-20) rotate(-10)"></ellipse>
+          <ellipse rx="5" ry="20" transform="translate(10,-20) rotate(10)"></ellipse>
+          <circle r="20"></circle>
+        </g>
+        <g transform="translate(250,100)">
+          <ellipse rx="2" ry="10" transform="translate(0,-20)"></ellipse>
+          <ellipse rx="2" ry="10" transform="translate(-5,-20) rotate(-45)"></ellipse>
+          <ellipse rx="2" ry="10" transform="translate(5,-20) rotate(45)"></ellipse>
+          <circle r="20"></circle>
+        </g>
+      </svg>
+
       <h2>Resources</h2>
 
       <div>Time: {{ time }}</div>
@@ -46,7 +70,7 @@
             </tr>
           </tbody>
         </table>
-      <div>
+      </div>
     </div>
   </body>
 </html>
