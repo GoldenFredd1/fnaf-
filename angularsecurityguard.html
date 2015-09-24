@@ -6,10 +6,10 @@
     <script src="controllers.js"></script>
     <style>
       table, th, td { border: 1px solid black; }
-      #bear { fill: brown; }
-      #fox { fill: red; }
-      #bunny { fill: blue; }
-      #chick { fill: yellow; stroke: black; }
+      #Bear { fill: brown; }
+      #Fox { fill: red; }
+      #Bunny { fill: blue; }
+      #Chick { fill: yellow; stroke: black; }
     </style>
   </head>
   <body>
@@ -29,28 +29,28 @@
           <circle r="2" cx="-7" cy="-7" style="fill: blue";></circle>
           </g>
           <circle id="nose" r="5" style="fill: black";></circle>
-        <g id="bear">
+        <g id="Bear">
           <circle r="10" cx="-15" cy="-15"></circle>
           <circle r="10" cx="15" cy="-15"></circle>
           <circle r="20"></circle>
           <use xlink:href="#eyes"></use>
           <use xlink:href="#nose"></use>
         </g>
-        <g id="fox">
+        <g id="Fox">
           <polygon transform = "translate(-15,-18) rotate(-40)" points="-10,9 10,9 0,-12"></polygon>
           <polygon transform = "translate(15,-18) rotate(40)" points="-10,9 10,9 0,-12"></polygon>
           <circle r="20"></circle>
           <use xlink:href="#eyes"></use>
           <use xlink:href="#nose"></use>
         </g>
-        <g id="bunny">
+        <g id="Bunny">
           <ellipse rx="5" ry="20" transform="translate(-10,-20) rotate(-10)"></ellipse>
           <ellipse rx="5" ry="20" transform="translate(10,-20) rotate(10)"></ellipse>
           <circle r="20"></circle>
           <use xlink:href="#eyes"></use>
           <use xlink:href="#nose"></use>
         </g>
-        <g id="chick">
+        <g id="Chick">
           <ellipse rx="2" ry="10" transform="translate(0,-20)"></ellipse>
           <ellipse rx="2" ry="10" transform="translate(-5,-20) rotate(-45)"></ellipse>
           <ellipse rx="2" ry="10" transform="translate(5,-20) rotate(45)"></ellipse>
@@ -59,10 +59,16 @@
           <polygon points="-7,0 0,-4 7,0 0,8" style="fill: orange;"></polygon>
         </g>
         </defs>
-        <use xlink:href="#fox" x="100" y="100"></use>
-        <use xlink:href="#bunny" x="150" y="100"></use>
-        <use xlink:href="#bear" x="200" y="100"></use>
-        <use xlink:href="#chick" x="250" y="100"></use>
+        <use xlink:href="#Fox" x="100" y="100"></use>
+        <use xlink:href="#Bunny" x="150" y="100"></use>
+        <use xlink:href="#Bear" x="200" y="100"></use>
+        <use xlink:href="#Chick" x="250" y="100"></use>
+      </svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ng-repeat="view in views" ng-if="view.type == 'cam'">
+        <g ng-repeat="loc in view.location">
+        <use ng-repeat="enemy in enemies" xlink:href="#{{ enemy.name }}" x="{{ 100 + 50 * $index" y="{{ 100 + 20 * $parent.$index }}"></use>
+        </g>
       </svg>
 
       <h2>Resources</h2>
