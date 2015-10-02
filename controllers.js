@@ -4,13 +4,13 @@ securityGuardGame.controller('gameState', ['$scope', '$interval', '$timeout', '$
     $scope.debug = true;
     $scope.time = 0;
     $scope.power = 100;
-
-    $http.get("views.json")
+    $scope.show = {"location":[{"name":"you","locId":999}],"name":"Player"};
+    $http.get("https://midnightfreddie.github.io/AngularSecurityGuard/views.json")
       .success(function(response) {
         $scope.views = response;
       });
     // Array of objects describing enemy attributes and behaviors
-    $http.get("enemies.json")
+    $http.get("https://midnightfreddie.github.io/AngularSecurityGuard/enemies.json")
       .success(function(response) {
         $scope.enemies = response;
         $scope.enemies.forEach( function(enemy) { enemy['kills'] = 0; } );
