@@ -4,6 +4,14 @@
     <title>Angular Security Guard</title>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="controllers.js"></script>
+    <style>
+      table, th, td { border: 1px solid black; }
+      #Bear { fill: brown; }
+      #Fox { fill: red; }
+      #Bunny { fill: blue; }
+      #Chick { fill: yellow; stroke: black; }
+      svg { background: gray; }
+    </style>
   </head>
   <body>
     <h1>Angular Security Guard</h1>
@@ -13,28 +21,101 @@
 
     <div ng-controller="gameState">
 
-      <h2>Resources</h2>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+        <defs>
+          <g id="eyes">
+          <circle r="5" cx="7" cy="-7" style="fill: white";></circle>
+          <circle r="2" cx="7" cy="-7" style="fill: blue";></circle>
+          <circle r="5" cx="-7" cy="-7" style="fill: white";></circle>
+          <circle r="2" cx="-7" cy="-7" style="fill: blue";></circle>
+          </g>
+          <circle id="nose" r="5" style="fill: black";></circle>
+        <g id="Bear">
+          <circle r="10" cx="-15" cy="-15"></circle>
+          <circle r="10" cx="15" cy="-15"></circle>
+          <circle r="20"></circle>
+          <use xlink:href="#eyes"></use>
+          <use xlink:href="#nose"></use>
+        </g>
+        <g id="Fox">
+          <polygon transform = "translate(-15,-18) rotate(-40)" points="-10,9 10,9 0,-12"></polygon>
+          <polygon transform = "translate(15,-18) rotate(40)" points="-10,9 10,9 0,-12"></polygon>
+          <circle r="20"></circle>
+          <use xlink:href="#eyes"></use>
+          <use xlink:href="#nose"></use>
+        </g>
+        <g id="Bunny">
+          <ellipse rx="5" ry="20" transform="translate(-10,-20) rotate(-10)"></ellipse>
+          <ellipse rx="5" ry="20" transform="translate(10,-20) rotate(10)"></ellipse>
+          <circle r="20"></circle>
+          <use xlink:href="#eyes"></use>
+          <use xlink:href="#nose"></use>
+        </g>
+        <g id="Chick">
+          <ellipse rx="2" ry="10" transform="translate(0,-20)"></ellipse>
+          <ellipse rx="2" ry="10" transform="translate(-5,-20) rotate(-45)"></ellipse>
+          <ellipse rx="2" ry="10" transform="translate(5,-20) rotate(45)"></ellipse>
+          <circle r="20"></circle>
+          <use xlink:href="#eyes"></use>
+          <polygon points="-7,0 0,-4 7,0 0,8" style="fill: orange;"></polygon>
+        </g>
+        </defs>
+      </svg>
+
+      <!-- Currntly manually listing use links because $sce errors when trying to use an expression for xlink:href  -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ng-repeat-start="view in views" width="200" height="150">
+        <g ng-repeat="loc in view.location">
+        <use xlink:href="#Fox" x="25" ng-attr-y="{{ 60 + 40 * $index }}" ng-show="loc.locId == enemies[3]['location']"></use>
+        <use xlink:href="#Bunny" x="75" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[1]['location']"></use>
+        <use xlink:href="#Bear" x="125" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[0]['location']"></use>
+        <use xlink:href="#Chick" x="175" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[2]['location']"></use>
+        </g>
+        <text y="20">{{ view.name }}  {{ view.room }}</text>
+      </svg>
+      <span ng-repeat-end> </span>
+      <!-- The above spanned space is a hack to visually separate the SVGs. When I'm managing views this should go away -->
+
+      <h2>Stats</h2>
 
       <div>Time: {{ time }}</div>
       <div>Power: {{ power }}</div>
-
-      <h2>Room Status</h2>
-
       <table>
-        <tr>
-          <th>Location Index</th>
-          <th>View</th>
-          <th>Room</th>
-          <th>Location</th>
-          <th>Enemies Present</th></tr>
-        <tr ng-repeat="location in locations">
-          <td>{{ $index }}</td>
-          <td>{{ location.view }}</td>
-          <td>{{ location.room }}</td>
-          <td>{{ location.name }}</td>
-          <td><span ng-repeat="enemy in enemies | filter : enemiesPresent($index)">{{ enemy.name }} </span></td>
-        </tr>
+      <tr>
+        <th>Enemy</th>
+        <th>Kills</th>
+      </tr>
+      <tr ng-repeat="enemy in enemies">
+        <td>{{ enemy.name }}</td>
+        <td>{{ enemy.kills }}</td>
+      </tr>
       </table>
+
+      <div ng-show="debug == true">
+        <h2>View Status</h2>
+  
+        <table>
+          <thead>
+            <tr>
+              <th>View</th>
+              <th>Type</th>
+              <th>Room</th>
+              <th>Location Name</th>
+              <th>Location ID</th>
+              <th>Enemies Present</th>
+            </tr>
+          </thead>
+          <tbody ng-repeat="view in views">
+            <tr ng-repeat="loc in view.location">
+              <td ng-if="$index == 0" rowspan="{{ view.location.length }}">{{ view.name }}</td>
+              <td ng-if="$index == 0" rowspan="{{ view.location.length }}">{{ view.type }}</td>
+              <td ng-if="$index == 0" rowspan="{{ view.location.length }}">{{ view.room }}</td>
+              <td>{{ loc.name }}</td>
+              <td>{{ loc.locId }}</td>
+              <td><span ng-repeat="enemy in enemies" ng-show="enemy.location == loc.locId">{{ enemy.name }} </span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </body>
 </html>
