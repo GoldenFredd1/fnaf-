@@ -1,6 +1,7 @@
 [
   {
     "name": "Bear",
+    "kills": 0,
     "location": 111,
     "movesMarkovChain": {
       "111": [
@@ -121,6 +122,7 @@
   },
   {
     "name": "Bunny",
+    "kills": 0,
     "location": 111,
     "movesMarkovChain": {
       "111": [
@@ -233,6 +235,7 @@
   },
   {
     "name": "Chick",
+    "kills": 0,
     "location": 111,
     "movesMarkovChain": {
       "111": [
@@ -353,6 +356,7 @@
   },
   {
     "name": "Fox",
+    "kills": 0,
     "location": 131,
     "movesMarkovChain": {
       "111": [
