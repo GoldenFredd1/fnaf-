@@ -1,200 +1,146 @@
-[
-    {
-        "name":  "Cam 1a",
-        "type":  "cam",
-        "room":  "Stage",
-        "location":  [
-                         {
-                             "name":  "Assigned Spot",
-                             "locId":  111
-                         },
-                         {
-                             "name":  "Looking at Camera",
-                             "locId":  112
-                         }
-                     ]
-    },
-    {
-        "name":  "Cam 1b",
-        "type":  "cam",
-        "room":  "Dining",
-        "location":  [
-                         {
-                             "name":  "Far",
-                             "locId":  121
-                         },
-                         {
-                             "name":  "Near",
-                             "locId":  122
-                         }
-                     ]
-    },
-    {
-        "name":  "Cam 1c",
-        "type":  "cam",
-        "room":  "Pirate Cove",
-        "location":  [
-                         {
-                             "name":  "Hidden Behind Curtain",
-                             "locId":  131
-                         },
-                         {
-                             "name":  "Peeking Out of Curtain",
-                             "locId":  132
-                         },
-                         {
-                             "name":  "Outside Curtain",
-                             "locId":  133
-                         }
-                     ]
-    },
-    {
-        "name":  "Cam 2a",
-        "type":  "cam",
-        "room":  "West Hall",
-        "location":  [
-                         {
-                             "name":  "Far",
-                             "locId":  211
-                         },
-                         {
-                             "name":  "Near",
-                             "locId":  212
-                         }
-                     ]
-    },
-    {
-        "name":  "Cam 2b",
-        "type":  "cam",
-        "room":  "West Hall",
-        "location":  [
-                         {
-                             "name":  "Far",
-                             "locId":  221
-                         },
-                         {
-                             "name":  "Near",
-                             "locId":  222
-                         }
-                     ]
-    },
-    {
-        "name":  "Cam 3",
-        "type":  "cam",
-        "room":  "Storage",
-        "location":  [
-                         {
-                             "name":  "Far",
-                             "locId":  301
-                         },
-                         {
-                             "name":  "Near",
-                             "locId":  302
-                         }
-                     ]
-    },
-    {
-        "name":  "Cam 4a",
-        "type":  "cam",
-        "room":  "East Hall",
-        "location":  [
-                         {
-                             "name":  "Far",
-                             "locId":  411
-                         },
-                         {
-                             "name":  "Near",
-                             "locId":  412
-                         }
-                     ]
-    },
-    {
-        "name":  "Cam 4b",
-        "type":  "cam",
-        "room":  "East Hall",
-        "location":  [
-                         {
-                             "name":  "Far",
-                             "locId":  421
-                         },
-                         {
-                             "name":  "Near",
-                             "locId":  422
-                         }
-                     ]
-    },
-    {
-        "name":  "Cam 5",
-        "type":  "cam",
-        "room":  "Backstage",
-        "location":  [
-                         {
-                             "name":  "Far",
-                             "locId":  501
-                         },
-                         {
-                             "name":  "Near",
-                             "locId":  502
-                         }
-                     ]
-    },
-    {
-        "name":  "Cam 6",
-        "type":  "cam",
-        "room":  "Kitchen",
-        "location":  [
-                         {
-                             "name":  "Far",
-                             "locId":  601
-                         }
-                     ]
-    },
-    {
-        "name":  "Cam 7",
-        "type":  "cam",
-        "room":  "Restrooms",
-        "location":  [
-                         {
-                             "name":  "Far",
-                             "locId":  701
-                         },
-                         {
-                             "name":  "Near",
-                             "locId":  702
-                         }
-                     ]
-    },
-    {
-        "name":  "West Door",
-        "type":  "door",
-        "room":  "West Hall Corner",
-        "location":  [
-                         {
-                             "name":  "Left Door",
-                             "locId":  221
-                         }
-                     ]
-    },
-    {
-        "name":  "Player",
-        "type":  "office",
-        "room":  "Security Office",
-        "location":  [
-                         {
-                             "name":  "you",
-                             "locId":  999
-                         }
-                     ]
-    },
-    {
-        "name":  "East Door",
-        "type":  "door",
-        "room":  "East Hall Corner",
-        "location":  [
-                         {
-                             "name":  "Right Door",
-                             "locId":  421
-                         }
-                     ]
-    }
-]
+[{
+    "name": "Cam 1a",
+    "type": "cam",
+    "room": "Stage",
+    "location": [{
+        "name": "Assigned Spot",
+        "locId": 111
+    }, {
+        "name": "Looking at Camera",
+        "locId": 112
+    }]
+}, {
+    "name": "Cam 1b",
+    "type": "cam",
+    "room": "Dining",
+    "location": [{
+        "name": "Far",
+        "locId": 121
+    }, {
+        "name": "Near",
+        "locId": 122
+    }]
+}, {
+    "name": "Cam 1c",
+    "type": "cam",
+    "room": "Pirate Cove",
+    "location": [{
+        "name": "Hidden Behind Curtain",
+        "locId": 131
+    }, {
+        "name": "Peeking Out of Curtain",
+        "locId": 132
+    }, {
+        "name": "Outside Curtain",
+        "locId": 133
+    }]
+}, {
+    "name": "Cam 2a",
+    "type": "cam",
+    "room": "West Hall",
+    "location": [{
+        "name": "Far",
+        "locId": 211
+    }, {
+        "name": "Near",
+        "locId": 212
+    }]
+}, {
+    "name": "Cam 2b",
+    "type": "cam",
+    "room": "West Hall",
+    "location": [{
+        "name": "Far",
+        "locId": 221
+    }, {
+        "name": "Near",
+        "locId": 222
+    }]
+}, {
+    "name": "Cam 3",
+    "type": "cam",
+    "room": "Storage",
+    "location": [{
+        "name": "Far",
+        "locId": 301
+    }, {
+        "name": "Near",
+        "locId": 302
+    }]
+}, {
+    "name": "Cam 4a",
+    "type": "cam",
+    "room": "East Hall",
+    "location": [{
+        "name": "Far",
+        "locId": 411
+    }, {
+        "name": "Near",
+        "locId": 412
+    }]
+}, {
+    "name": "Cam 4b",
+    "type": "cam",
+    "room": "East Hall",
+    "location": [{
+        "name": "Far",
+        "locId": 421
+    }, {
+        "name": "Near",
+        "locId": 422
+    }]
+}, {
+    "name": "Cam 5",
+    "type": "cam",
+    "room": "Backstage",
+    "location": [{
+        "name": "Far",
+        "locId": 501
+    }, {
+        "name": "Near",
+        "locId": 502
+    }]
+}, {
+    "name": "Cam 6",
+    "type": "cam",
+    "room": "Kitchen",
+    "location": [{
+        "name": "Far",
+        "locId": 601
+    }]
+}, {
+    "name": "Cam 7",
+    "type": "cam",
+    "room": "Restrooms",
+    "location": [{
+        "name": "Far",
+        "locId": 701
+    }, {
+        "name": "Near",
+        "locId": 702
+    }]
+}, {
+    "name": "West Door",
+    "type": "door",
+    "room": "West Hall Corner",
+    "location": [{
+        "name": "Left Door",
+        "locId": 221
+    }]
+}, {
+    "name": "Player",
+    "type": "office",
+    "room": "Security Office",
+    "location": [{
+        "name": "you",
+        "locId": 999
+    }]
+}, {
+    "name": "East Door",
+    "type": "door",
+    "room": "East Hall Corner",
+    "location": [{
+        "name": "Right Door",
+        "locId": 421
+    }]
+}]
