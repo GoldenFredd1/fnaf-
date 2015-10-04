@@ -89,7 +89,7 @@
                             <td ng-if="$index == 0" rowspan="{{ view.location.length }}">{{ view.room }}</td>
                             <td>{{ loc.name }}</td>
                             <td>{{ loc.locId }}</td>
-                            <td><span ng-repeat="enemy in enemies" ng-show="enemy.location == loc.locId">{{ enemy.name }} {{enemy.location}} - {{loc.locId}} </span></td>
+                            <td><span ng-repeat="enemy in enemies" ng-show="enemy.location == loc.locId">{{ enemy.name }}</span></td>
                         </tr>
                     </tbody>
                 </table>
