@@ -24,6 +24,8 @@
                     <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
                 </div>
                 <p class="lead">Currently there is no user interface aside from refreshing or leaving the page. The timer counts seconds, and each second each enemy may move depending on its program. If an enemy reaches the security office it may stick around a few seconds, then it will go backstage, then either continue wandering or go back to its original position if backstage isn't on its movement possibilities. Power never changes. Not all locations are used.</p>
+                <p class="lead">Added some new advanced logic that might go unnoticed. Now the system is currently basing almost everything off of a promise. in this promise we make sure everything is done according to play before we move on. In doing this we allow ourselves to break out of a promise to stop our interval timer on the game which also is a promise. Overall they game now promises to promise things to you ...... youll just never see them :)                    
+                </p>
             </div>
         </div>
         <div class="col-sm-12">
