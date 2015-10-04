@@ -10,6 +10,11 @@
 </head>
 
 <body ng-controller="gameState">
+
+  <!-- display all the random items -->
+  <ul>
+    <li ng-repeat="item in items track by $index" ng-bind="item"></li>
+  </ul>
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -20,6 +25,10 @@
                 </div>
                 <p class="lead">Currently there is no user interface aside from refreshing or leaving the page. The timer counts seconds, and each second each enemy may move depending on its program. If an enemy reaches the security office it may stick around a few seconds, then it will go backstage, then either continue wandering or go back to its original position if backstage isn't on its movement possibilities. Power never changes. Not all locations are used.</p>
             </div>
+        </div>
+        <div class="col-sm-12">
+          <button ng-show="!status" class="btn btn-success" type="button" ng-click="start()">Resume Game</button>
+          <button ng-show="status"class="btn btn-danger" type="button" ng-click="stop()">Pause Game</button>
         </div>
         <div class="row">
             <div class="col-sm-6">
@@ -38,10 +47,10 @@
                 <h1>Camera - {{show.name}}</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="150">
                     <g ng-repeat="loc in show.location">
-                        <use xlink:href="#Fox" x="25" ng-attr-y="{{ 60 + 40 * $index }}" ng-show="loc.locId == enemies[3]['location']"></use>
-                        <use xlink:href="#Bunny" x="75" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[1]['location']"></use>
-                        <use xlink:href="#Bear" x="125" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[0]['location']"></use>
-                        <use xlink:href="#Chick" x="175" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[2]['location']"></use>
+                        <use xlink:href="#Fox" x="25" ng-attr-y="{{ 60 + 40 * $index }}" ng-show="loc.locId == enemies['Fox']['location']"></use>
+                        <use xlink:href="#Bunny" x="75" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies['Bunny']['location']"></use>
+                        <use xlink:href="#Bear" x="125" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies['Bear']['location']"></use>
+                        <use xlink:href="#Chick" x="175" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies['Chick']['location']"></use>
                     </g>
                 </svg>
             </div>
@@ -80,7 +89,7 @@
                             <td ng-if="$index == 0" rowspan="{{ view.location.length }}">{{ view.room }}</td>
                             <td>{{ loc.name }}</td>
                             <td>{{ loc.locId }}</td>
-                            <td><span ng-repeat="enemy in enemies" ng-show="enemy.location == loc.locId">{{ enemy.name }} </span></td>
+                            <td><span ng-repeat="enemy in enemies" ng-show="enemy.location == loc.locId">{{ enemy.name }} {{enemy.location}} - {{loc.locId}} </span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -129,10 +138,10 @@
                 <!-- Currntly manually listing use links because $sce errors when trying to use an expression for xlink:href  -->
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ng-repeat-start="view in views" width="200" height="150">
                     <g ng-repeat="loc in view.location">
-                        <use xlink:href="#Fox" x="25" ng-attr-y="{{ 60 + 40 * $index }}" ng-show="loc.locId == enemies[3]['location']"></use>
-                        <use xlink:href="#Bunny" x="75" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[1]['location']"></use>
-                        <use xlink:href="#Bear" x="125" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[0]['location']"></use>
-                        <use xlink:href="#Chick" x="175" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies[2]['location']"></use>
+                        <use xlink:href="#Fox" x="25" ng-attr-y="{{ 60 + 40 * $index }}" ng-show="loc.locId == enemies['Fox']['location']"></use>
+                        <use xlink:href="#Bunny" x="75" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies['Bunny']['location']"></use>
+                        <use xlink:href="#Bear" x="125" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies['Bear']['location']"></use>
+                        <use xlink:href="#Chick" x="175" ng-attr-y="{{ 60 + 50 * $index }}" ng-show="loc.locId == enemies['Chick']['location']"></use>
                     </g>
                     <text y="20">{{ view.name }} {{ view.room }}</text>
                 </svg>
@@ -148,6 +157,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-resource.js"></script>
     <script src="controllers.js"></script>
 </body>
 
