@@ -1,5 +1,5 @@
-[
-  {
+{
+  "Bear":{
     "name": "Bear",
     "kills": 0,
     "location": 111,
@@ -120,7 +120,7 @@
       ]
     }
   },
-  {
+  "Bunny":{
     "name": "Bunny",
     "kills": 0,
     "location": 111,
@@ -233,7 +233,7 @@
       ]
     }
   },
-  {
+  "Chick":{
     "name": "Chick",
     "kills": 0,
     "location": 111,
@@ -354,7 +354,7 @@
       ]
     }
   },
-  {
+  "Fox":{
     "name": "Fox",
     "kills": 0,
     "location": 131,
@@ -493,4 +493,4 @@
       ]
     }
   }
-]
+}
